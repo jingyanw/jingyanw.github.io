@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" type="text/javascript"></script>
+
+    <title>Jingyan Wang</title>
+  </head>
+
+  <body>
+
+  <div class="header">
+  <header>
+      <nav>
+        <ul>
+          <li style="margin-top: 0px; margin-bottom: 0px;"><name>Jingyan Wang</name></li>
+          <li style="margin-top: 0px; margin-bottom: 0px;"></li>
+          <li style="margin-top: 0px; margin-bottom: 0px;"><a class="toptabs" href="#home">Home</a></li>
+          <li style="margin-top: 0px; margin-bottom: 0px;"><a class="toptabs" href="#research">Research</a></li>
+          <li style="margin-top: 0px; margin-bottom: 0px;"><a class="toptabs" href="#publications">Publications</a></li>
+          <li style="margin-top: 0px; margin-bottom: 0px;"><a class="toptabs" href="#teaching">Teaching</a></li>
+          <li style="margin-top: 0px; margin-bottom: 0px;"></li>
+        </ul>
+      </nav>
+  </header>
+  </div>
+
+
+<div id="mainbody" style="margin-top: 60px;">
+
+<!-- ------------------------------------------------- -->
+  <section id="home">
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <td width="30%" valign="middle">
+    <img class="headshot" src="jingyanw.jpg">
+    </td>
+
+    <td width="70%" valign="middle">
+    <p>I am a postdoctoral fellow in the School of Industrial and Systems Engineering at Georgia Institute of Technology, working with <a href="https://sites.gatech.edu/ashwin-pananjady/">Ashwin Pananjady</a>.
+      I received my Ph.D. in the School of Computer Science at Carnegie Mellon University, advised by <a href="https://www.cs.cmu.edu/~nihars/">Nihar Shah</a>. Before that, I received my B.S. in Electrical Engineering and Computer Sciences from UC Berkeley.
+    </p>
+    <p>
+      My research interest is in machine learning, particularly in applications to improving decision-making and evaluation problems such as admissions, peer grading and peer review. In these applications, the goal of my research is to understand and mitigate various biases using tools from computer science and statistics, and to also have real-world impact through outreach and policies.
+    </p><br>
+    <p>
+      <b>Email:</b> jingyanw [at] gatech.edu
+    </p>
+    </td>
+  </tr>
+  </table>
+  </section>
+
+  <section id="research">
+  <hr>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tr><td>
+    <sectiontitle>Research</sectiontitle>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+  The goal of my research is to <b>understand and mitigate various sources of biases</b> in decision making problems, such as in peer review and peer grading. To understand the biases, I use tools from statistics and computer science to identify their causes and analyze their extent. To mitigate the biases, I work on outreach and policies that lead to practical impacts. Specifically, my research considers three major components that are potentially biased: <b>people, algorithms and policies</b>.
+    <ul>
+    <li> <b>Human bias:</b> People can be biased when they make evaluations (even if they try to be accurate and impartial). One type of such bias is the <em>miscalibration</em> of people, that is, the fact that people have different scales when expressing opinions.
+
+    In past work, we designed algorithms that take into account the miscalibration of people -- for example, some people tend to be lenient and give higher scores, and some others tend to be strict. Our algorithms are provably more robust to people’s miscalibration, and hence make the evaluation more fair. [<a href="https://arxiv.org/abs/1806.05085">paper</a>]
+
+    <br><br>
+    Another type of bias is introduced by the <em>outcome that people have experienced</em>. For example, when evaluating instructors' teaching quality, students often give higher ratings if they receive higher grades, and often give lower ratings if they receive lower grades. In past work, we formulated a model for this problem, and proposed an estimator that reduces the bias in a data-dependent fashion, without prior knowledge on the extent of the existing bias. [<a href="https://arxiv.org/abs/2012.00714">paper</a>]
+
+    </li><br>
+
+    <li> <b>Algorithmic bias:</b> An emerging line of research on algorithmic bias addresses the question: "Can algorithms amplify biases that exist in the data?" In past work, we addressed a related but different question: "Can algorithms themselves introduce a bias, even if the data is perfectly unbiased?" Specifically, for a widely-used model (the Bradley-Terry model) and algorithm (the maximum likelihood estimator) for peer-grading, we mathematically showed that even under the assumption that students give unbiased peer grades, the algorithm systematically assigns lower scores to the top students and assigns higher scores to the students at bottom. In turn, we proposed a modification to the algorithm which provably reduces such bias and is also extremely simple to be implemented in practice. [<a href="https://arxiv.org/abs/1906.04066">paper</a>]
+    </li><br>
+
+    <li> <b>Policy bias:</b> Going beyond technical work, I desire to extend my research to real policy improvements in practice. For example, we compiled the data and evaluated the gender distribution in award-winning papers in 16 top computer science conferences in the past 10 years, which showed prominent differences across conferences [<a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">blog post</a>]. We also considered the biases caused by the alphabetical ordering practice in scientific publication [<a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">blog post</a>]. Taking cognizance of the biases arising from alphabetical ordering, the Machine Learning Department at CMU has randomized the ordering of <a href="https://www.ml.cmu.edu/people/phd-students.html">students</a> and <a href="https://www.ml.cmu.edu/people/core-faculty.html">faculty</a> on its webpages.
+    </li><br>
+    </ul>
+
+  </td></tr>
+  </table>
+  </section>
+
+<!-- ------------------------------------------------- -->
+  <section id="publications">
+  <hr>
+  <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tr><td>
+        <sectiontitle>Preprints</sectiontitle>
+      </td></tr>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <ul>
+      <li> <papertitle><a href="http://arxiv.org/abs/1906.04066">Stretching the Effectiveness of MLE from Accuracy to Bias for Pairwise Comparisons</a></papertitle><br>
+        <div><paperauthors>Jingyan Wang, Nihar B. Shah, R. Ravi</paperauthors><br>
+          <papersource>Available on arXiv, 2019</papersource>
+        </div><br>
+      </li>
+    </ul>
+  </table> -->
+
+<!-- ------------------------------------------------- -->
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tr><td>
+      <!-- <sectiontitle>Papers</sectiontitle> -->
+      <sectiontitle>Publications</sectiontitle>
+    </td></tr>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <ul>
+      <!-- - -->
+      <li> <papertitle>A Heuristic for Statistical Seriation</papertitle><br>
+        <div><paperauthors>Komal Dhull, Jingyan Wang, Nihar B. Shah, Yuanzhi Li, R. Ravi</paperauthors><br>
+          <papersource>UAI, 2021</papersource>
+        </div>
+        <br>
+      </li>
+
+      <li> <papertitle><a href="https://arxiv.org/abs/2012.00714">Debiasing Evaluations That are Biased by Evaluations</a></papertitle><br>
+        <div><paperauthors>Jingyan Wang, Ivan Stelmakh, Yuting Wei, Nihar B. Shah</paperauthors><br>
+          <papersource>AAAI, 2021</papersource>
+        </div>
+        <div>
+          [<a href="https://github.com/jingyanw/outcome-induced-debiasing">code</a>] [<a href="https://slideslive.com/38947990">talk</a>]
+        </div>
+        <br>
+      </li>
+
+      <!-- - -->
+      <li> <papertitle><a href="https://arxiv.org/abs/1906.04066">Stretching the Effectiveness of MLE from Accuracy to Bias for Pairwise Comparisons</a></papertitle><br>
+        <div><paperauthors>Jingyan Wang, Nihar B. Shah, R. Ravi</paperauthors><br>
+          <papersource>AISTATS, 2020</papersource>
+        </div>
+        <div>
+            [<a href="https://slideslive.com/38929955">talk</a>]
+        </div><br>
+      </li>
+
+      <!-- - -->
+      <li> <papertitle><a href="https://arxiv.org/abs/1806.05085">Your 2 is My 1, Your 3 is My 9: Handling Arbitrary Miscalibrations in Ratings</a></papertitle><br>
+        <div><paperauthors>Jingyan Wang, Nihar B. Shah</paperauthors><br>
+          <papersource>AAMAS, 2019</papersource>
+        </div>
+        <div>
+          <b>Best student paper award at AAMAS 2019</b>
+        </div>
+        <div>
+        	Also appeared as "Ranking and Rating Rankings and Ratings" at <papersource>AAAI 2020 Sister Conference Track</papersource>
+        </div>
+        <div>
+            [<a href="slides/miscalibration_slides.pdf">slides</a>]
+        </div><br>
+      </li>
+
+      <!-- - -->
+      <li> <papertitle><a href="papers/refinement.pdf">The more you look, the more you see: towards general object understanding through recursive refinement</a></papertitle><br>
+        <div><paperauthors>Jingyan Wang, Olga Russakovsky, Deva Ramanan</paperauthors><br>
+          <papersource>WACV, 2018</papersource>
+        </div>
+        <div>
+            <!-- [<a href="https://www.youtube.com/watch?v=nz9J0CrE0Fo">talk</a>] -->
+            [<a href="https://github.com/jingyanw/recursive-refinement">code</a>] [<a href="papers/refinement_supp.pdf">supplementary</a>]
+        </div><br>
+      </li>
+
+      <!-- - -->
+      <li> <papertitle><a href="https://www.usenix.org/system/files/conference/fast15/fast15-paper-rashmi.pdf">Having Your Cake and Eating It Too: Jointly Optimal Codes for I/O, Storage and Network-bandwidth in Distributed Storage Systems</a></papertitle><br>
+        <div><paperauthors>K. V. Rashmi, Preetum Nakkiran, Jingyan Wang, Nihar B. Shah, Kannan Ramchandran</paperauthors><br>
+          <papersource>USENIX FAST, 2015</papersource>
+        </div>
+        <div>
+          <b>Picked as the best paper of USENIX FAST 2015 by <a href="https://storagemojo.com/2015/05/11/fast-15-storagemojos-best-paper/">StorageMojo</a></b>
+        </div>
+        <br>
+      </li>
+
+      <!-- - -->
+      <li> <papertitle><a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-39-5-1326">3D differential phase-contrast microscopy with computational illumination using an LED array</a></papertitle><br>
+        <div><paperauthors>Lei Tian, Jingyan Wang, Laura Waller</paperauthors><br>
+          <papersource>Optics Letters, 2014</papersource><br>
+        </div><br>
+      </li>
+      </ul>
+  </table>
+  </section>
+
+<!-- ------------------------------------------------- -->
+  <section id="teaching">
+  <hr>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tr><td>
+    <sectiontitle>Teaching</sectiontitle>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <ul>
+    <li> <b>16-720 Computer Vision</b> <br><div>TA, Fall 2017</div></li><br>
+    </ul>
+    </td></tr>
+  </table>
+  </section>
+
+  <!-- <font size="-1">Last updated: 03/2019</font> -->
+
+<!-- ------------------------------------------------- -->
+  </div>
+
+
+  <script>
+    $( window ).resize(function() {
+      setScreen();
+    });
+
+     $(document).ready(function () {
+        setScreen();
+
+        $(document).on("scroll", onScroll);
+
+        $('a[href^="#"]').on('click', function (e) {
+          e.preventDefault();
+          $(document).off("scroll");
+
+          $('a').each(function () {
+            $(this).removeClass('toptabs_active');
+          })
+          $(this).addClass('toptabs_active');
+
+          var target = this.hash;
+          $target = $(target);
+          $('html, body').stop().animate({
+            'scrollTop': $target.offset().top-$('header').outerHeight(true)+3
+          }, 500, 'swing', function () {
+            $(document).on("scroll", onScroll);
+          });
+        });
+      });
+
+      function onScroll(event){
+        var scrollPosition = $(document).scrollTop();
+        $('nav a').each(function () {
+          var currentLink = $(this);
+          var refElement = $(currentLink.attr("href"));
+          if (refElement.position().top <= scrollPosition + $('header').outerHeight(true) +1 && refElement.position().top + refElement.height() > scrollPosition + $('header').outerHeight(true) +1) {
+            $('nav ul li a').removeClass("toptabs_active");
+            currentLink.addClass("toptabs_active");
+          }
+          else{
+            currentLink.removeClass("toptabs_active");
+          }
+        });
+      }
+
+
+      function setScreen() {
+        $('#mainbody').css('margin-top',$('header').outerHeight(true)+5);
+        $('nav ul li').css('margin-top','0px');
+        $('nav ul li').css('margin-bottom','0px');
+      }
+
+  </script>
+  </body>
+</html>
