@@ -66,16 +66,17 @@
 
   The goal of my research is to <b>understand and mitigate various sources of biases</b> in decision making problems, such as in peer review and peer grading. To understand the biases, I use tools from statistics and computer science to identify their causes and analyze their extent. To mitigate the biases, I work on outreach and policies that lead to practical impacts. Specifically, my research considers three major components that are potentially biased: <b>people, algorithms and policies</b>.
     <ul>
-    <li> <b>Human bias:</b> People can be biased when they make evaluations (even if they try to be accurate and impartial). One type of such bias is the <em>miscalibration</em> of people, that is, the fact that people have different scales when expressing opinions.
+    <li> <b>Human bias:</b> People can be biased when they make evaluations (even if they try to be accurate and impartial). My work provides models and analysis for a few types of human biases:
 
-    In past work, we designed algorithms that take into account the miscalibration of people -- for example, some people tend to be lenient and give higher scores, and some others tend to be strict. Our algorithms are provably more robust to people’s miscalibration, and hence make the evaluation more fair. [<a href="https://arxiv.org/abs/1806.05085">paper</a>]
-
-    <br><br>
-    Another type of bias is introduced by the <em>outcome that people have experienced</em>. For example, when evaluating instructors' teaching quality, students often give higher ratings if they receive higher grades, and often give lower ratings if they receive lower grades. In past work, we formulated a model for this problem, and proposed an estimator that reduces the bias in a data-dependent fashion, without prior knowledge on the extent of the existing bias. [<a href="https://arxiv.org/abs/2012.00714">paper</a>]
-
-    </li><br>
-
-    <li> <b>Algorithmic bias:</b> An emerging line of research on algorithmic bias addresses the question: "Can algorithms amplify biases that exist in the data?" In past work, we addressed a related but different question: "Can algorithms themselves introduce a bias, even if the data is perfectly unbiased?" Specifically, for a widely-used model (the Bradley-Terry model) and algorithm (the maximum likelihood estimator) for peer-grading, we mathematically showed that even under the assumption that students give unbiased peer grades, the algorithm systematically assigns lower scores to the top students and assigns higher scores to the students at bottom. In turn, we proposed a modification to the algorithm which provably reduces such bias and is also extremely simple to be implemented in practice. [<a href="https://arxiv.org/abs/1906.04066">paper</a>]
+      <ul>
+      <li> <b>Miscalibration:</b> People have different scales when expressing opinions. In my work, we designed algorithms that take into account the miscalibration of people — for example, some people tend to be lenient and give higher scores, and some others tend to be strict. Our algorithms are provably more robust to people’s miscalibration, and hence make the evaluation more fair. [<a href="https://arxiv.org/abs/1806.05085">paper</a>]
+      </li><br>
+      <li> <b>Experience of people:</b> When evaluating instructors' teaching quality, students often give higher ratings if they receive higher grades, and often give lower ratings if they receive lower grades. In my work, we captured such tendencies by a natural monotonic constraint — the higher grade a student receive, the higher rating the student gives back to the instructor. We proposed an estimator that reduces the bias in a data-dependent fashion, without prior knowledge on the extent of the existing bias. [<a href="https://arxiv.org/abs/2012.00714">paper</a>]
+      </li><br>
+      <li> <b> Ordering of evaluation:</b> In applications such as sports competitions and hiring, decisions are made sequentially. In my work, we provided a model to capture the nature of such sequential evaluation, supported by crowdsourcing experiments. We proposed a ranking estimator that is both efficient and optimal (in a certain sense) for two canonical ranking metrics, whereas using the ranking naively induced by the scores is provably not optimal. [<a href="https://arxiv.org/abs/2205.01607">paper</a>]
+      </li><br>
+    </ul>
+    <li> <b>Algorithmic bias:</b> An emerging line of research on algorithmic bias addresses the question: "Can algorithms amplify biases that exist in the data?" In my work, we addressed a related but different question: "Can algorithms themselves introduce a bias, even if the data is perfectly unbiased?" Specifically, for a widely-used model (the Bradley-Terry model) and algorithm (the maximum likelihood estimator) for peer-grading, we mathematically showed that even under the assumption that students give unbiased peer grades, the algorithm systematically assigns lower scores to the top students and assigns higher scores to the students at bottom. In turn, we proposed a modification to the algorithm which provably reduces such bias and is also extremely simple to be implemented in practice. [<a href="https://arxiv.org/abs/1906.04066">paper</a>]
     </li><br>
 
     <li> <b>Policy bias:</b> Going beyond technical work, I desire to extend my research to real policy improvements in practice. For example, we compiled the data and evaluated the gender distribution in award-winning papers in 16 top computer science conferences in the past 10 years, which showed prominent differences across conferences [<a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">blog post</a>]. We also considered the biases caused by the alphabetical ordering practice in scientific publication [<a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">blog post</a>]. Taking cognizance of the biases arising from alphabetical ordering, the Machine Learning Department at CMU has randomized the ordering of <a href="https://www.ml.cmu.edu/people/phd-students.html">students</a> and <a href="https://www.ml.cmu.edu/people/core-faculty.html">faculty</a> on its webpages.
@@ -102,7 +103,7 @@
         </div>
         <div>
           [<a href="https://github.com/jingyanw/sequential-bias">data</a>] [<a href="https://github.com/jingyanw/sequential-bias">code</a>]
-        </div><br>
+        </div>
       </li>
     </ul>
   </table>
