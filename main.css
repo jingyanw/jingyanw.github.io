@@ -96,9 +96,27 @@ hr {
 }
 
 .headshot {
-  float: left;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 275px;
 }
 
 font.highlight {color: #C23E22; font-weight: bold}
 #mainbody {padding: 4%; margin-top: 60px;}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.column_left {
+  flex: 30%;
+}
+
+.column_right {
+	margin-left: 20px;
+  flex: 60%;
+}
