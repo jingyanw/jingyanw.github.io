@@ -46,7 +46,7 @@
       I received my Ph.D. in the School of Computer Science at Carnegie Mellon University, advised by <a href="https://www.cs.cmu.edu/~nihars/">Nihar Shah</a>. Before that, I received my B.S. in Electrical Engineering and Computer Sciences from UC Berkeley.
     </p>
     <p>
-      My research interest is in machine learning, particularly in applications to improving decision-making and evaluation problems such as admissions, peer grading and peer review. In these applications, the goal of my research is to understand and mitigate various biases using tools from computer science and statistics, and to also have real-world impact through outreach and policies.
+      My research interest is in statistical machine learning, particularly in applications to high-stakes decision-making and evaluation problems such as admissions, hiring, peer grading and peer review. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that real-world impacts.
     </p><br>
     <p>
       <b>Email:</b> jingyanw [at] gatech.edu
@@ -63,32 +63,37 @@
   <hr>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
     <tr><td>
-    <sectiontitle>Research</sectiontitle>
+    <sectiontitle>Research Overview</sectiontitle>
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-  The goal of my research is to <b>understand and mitigate various sources of biases</b> in decision making problems, such as in peer review and peer grading. To understand the biases, I use tools from statistics and computer science to identify their causes and analyze their extent. To mitigate the biases, I work on outreach and policies that lead to practical impacts. Specifically, my research considers four major components that are potentially biased: <b>people, algorithms, designs and policies</b>.
+  The goal of my research is to develop <b>accurate, efficient and fair evaluation systems</b>. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that real-world impacts. Specifically, I identify, analyze and improve three key components: <b>algorithms, people, and designs</b>.
     <ul>
-    <li> <b>People:</b> People can be biased when they make evaluations (even if they try to be accurate and impartial). My work provides models and analysis for a few types of human biases:
-
+    <li> <b>Algorithms:</b> It's important to think holistically about the objectives and constraints, which describe intricate connections and tradeoffs underlying evaluation systems. I develop algorithms that effectively aggregate evaluation data, integrating accuracy with the following considerations:<br><br>
       <ul>
-        <li> <b>Miscalibration:</b> People have different scales when expressing opinions. In my work, we designed algorithms that take into account the miscalibration of people — for example, some people tend to be lenient and give higher scores, and some others tend to be strict. Our algorithms are provably more robust to people’s miscalibration, and hence make the evaluation more fair. [<a href="https://arxiv.org/abs/1806.05085">paper</a>]
+        <li><b>Fairness:</b>
+          We consider a crowdsourcing model (Bradley-Terry model) that infers item quality from pairwise comparisons. We propose a simple modification to the widely-used maximum likelihood estimator, which is simple to implement and enjoys a win-win in the bias-accuracy tradeoff – that is, it significantly improves fairness while achieving optimal accuracy. [<a href="https://arxiv.org/abs/1906.04066">paper</a> | <a href="https://slideslive.com/38929955">talk</a>]
         </li><br>
-        <li> <b>Experience of people:</b> When evaluating instructors' teaching quality, students often give higher ratings if they receive higher grades, and often give lower ratings if they receive lower grades. In my work, we captured such tendencies by a natural monotonic constraint — the higher grade a student receive, the higher rating the student gives back to the instructor. We proposed an estimator that reduces the bias in a data-dependent fashion, without prior knowledge on the extent of the existing bias. [<a href="https://arxiv.org/abs/2012.00714">paper</a>]
+        <li><b>Uncertainty:</b> In applications such as hiring and admissions, part of the goal is to successfully recruit a pre-defined number of candidates. We formulate a Knapsack-style combinatorial optimization problem, and present theoretical guarantees for various algorithms that simultaneously consider quality and uncertainty.
+        </li>
+      </ul><br>
+
+    <li> <b>People:</b> Algorithms do not operate in isolation; it is crucial to consider where input data come from – human evaluators. People are not perfectly rational agents, and they have biases even if they consciously try to avoid them. My work identifies three sources of human biases:<br><br>
+      <ul>
+        <li> <b>Miscalibration:</b>
+          People have different numerical scales when reporting ratings. We design algorithms that take into account the miscalibration of people – for example, some people tend to be lenient and give higher scores, and some others tend to be strict. Our algorithms are provably more robust to people’s miscalibration, and hence make the evaluation more fair. [<a href="https://arxiv.org/abs/1806.05085">paper</a>]
         </li><br>
-        <li> <b> Ordering of evaluation:</b> In applications such as sports competitions and hiring, decisions are made sequentially. In my work, we provided a model to capture the nature of such sequential evaluation, supported by crowdsourcing experiments. We proposed a ranking estimator that is both efficient and optimal (in a certain sense) for two canonical ranking metrics, whereas using the ranking naively induced by the scores is provably not optimal. [<a href="https://arxiv.org/abs/2205.01607">paper</a>]
+        <li> <b>Personal experience:</b>
+          Evaluators are influenced by their experiences. For example, in teaching evaluation, students often give higher ratings if they receive higher grades. We capture such tendencies by a natural monotonic constraint, and propose an estimator that reduces the bias in a data-dependent fashion, without prior knowledge on the extent of the bias. [<a href="https://arxiv.org/abs/2012.00714">paper</a> | <a href="https://slideslive.com/38947990">talk</a>]
+        </li><br>
+        <li> <b> Ordering effect:</b> Evaluations are made sequentially in applications such as sports/arts competitions and hiring. We provide a model to capture the nature of such sequential evaluation, supported by crowdsourcing experiments. We propose a ranking estimator that is both efficient and optimal (in certain notions), whereas using the ranking naively induced by the scores is provably not optimal. [<a href="https://arxiv.org/abs/2205.01607">paper</a>]
         </li><br>
       </ul>
-    <li> <b>Algorithms:</b> An emerging line of research on algorithmic bias addresses the question: "Can algorithms amplify biases that exist in the data?" In my work, we addressed a related but different question: "Can algorithms themselves introduce a bias, even if the data is perfectly unbiased?" Specifically, for a widely-used model (the Bradley-Terry model) and algorithm (the maximum likelihood estimator) for peer-grading, we mathematically showed that even under the assumption that students give unbiased peer grades, the algorithm systematically assigns lower scores to the top students and assigns higher scores to the students at bottom. In turn, we proposed a modification to the algorithm which provably reduces such bias and is also extremely simple to be implemented in practice. [<a href="https://arxiv.org/abs/1906.04066">paper</a>]
-    </li><br>
 
-    <li><b>Designs:</b> Various design decisions need to be made in terms of how to engage people in evaluation problems. In many applications, the number of candidates under consideration is large, thereby making it infeasible for a single evaluator to review all of them. I examine different allocation schemes that distribute the task to reviewers, and provide a comprehensive comparison between them using a mixture of theoretical and experimental approaches. [<a href="https://arxiv.org/abs/2209.08665">paper</a>]
-    </li><br>
-
-    <li> <b>Policies:</b> Going beyond technical work, I desire to extend my research to real policy improvements in practice. For example, we compiled the data and evaluated the gender distribution in award-winning papers in 16 top computer science conferences in the past 10 years, which showed prominent differences across conferences [<a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">blog post</a>]. We also considered the biases caused by the alphabetical ordering practice in scientific publication [<a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">blog post</a>]. Taking cognizance of the biases arising from alphabetical ordering, the Machine Learning Department at CMU has randomized the ordering of <a href="https://www.ml.cmu.edu/people/phd-students.html">students</a> and <a href="https://www.ml.cmu.edu/people/core-faculty.html">faculty</a> on its webpages.
-    </li><br>
+    <li><b>Designs:</b> People engage with algorithms, and algorithms influence human behaviors. I study design and policy decisions that underpin the interactions between people and algorithms in evaluation systems. In large-scale evaluation tasks, we examine different allocation schemes that distribute the task to reviewers, and provide a comprehensive comparison between them using a mixture of theoretical and experimental approaches. [<a href="https://arxiv.org/abs/2209.08665">paper</a>]
+    </li>
     </ul>
-
+    Beyond technical work, I desire to extend my research to real policy improvements in practice. For example, we compile the data and evaluate the gender distribution in award-winning papers in 16 top computer science conferences in the past 10 years, which shows prominent differences across conferences. [<a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">blog post</a>] We also consider the biases caused by the alphabetical ordering practice in scientific publication. Taking cognizance of the biases arising from alphabetical ordering, the Machine Learning Department at CMU has randomized the ordering of <a href="https://www.ml.cmu.edu/people/phd-students.html">students</a> and <a href="https://www.ml.cmu.edu/people/core-faculty.html">faculty</a> on its webpages, along with many other institutions. [<a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">blog post</a>]
   </td></tr>
   </table>
   </section>
@@ -108,7 +113,7 @@
           <papersource>Available on arXiv, 2022</papersource>
         </div>
         <div>
-          [<a href="https://github.com/jingyanw/sequential-bias">data</a>] [<a href="https://github.com/jingyanw/sequential-bias">code</a>]
+          [<a href="https://github.com/jingyanw/sequential-bias">data and code</a>]
         </div>
       </li>
     </ul>
@@ -137,7 +142,7 @@
           <papersource>HCOMP, 2022</papersource>
         </div>
         <div>
-          [<a href="https://github.com/jingyanw/segmented-vs-holistic">data</a>] [<a href="https://github.com/jingyanw/segmented-vs-holistic">code</a>]
+          [<a href="https://github.com/jingyanw/segmented-vs-holistic">data and code</a>]
         </div>
         <br>
       </li>
@@ -156,7 +161,7 @@
           <papersource>AAAI, 2021</papersource>
         </div>
         <div>
-          [<a href="https://github.com/jingyanw/outcome-induced-debiasing">code</a>] [<a href="https://slideslive.com/38947990">talk</a>]
+          [<a href="https://slideslive.com/38947990">talk</a>] [<a href="https://github.com/jingyanw/outcome-induced-debiasing">code</a>]
         </div>
         <br>
       </li>
@@ -228,7 +233,8 @@
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
     <ul>
-    <li> <b>16-720 Computer Vision</b> <br><div>TA, Fall 2017</div></li><br>
+    <li><b>16-720 Computer Vision, TA</b> <br><div>CMU, Fall 2017</div></li><br>
+    <li><b>EE 20N Signals and Systems, Lab Assistant</b> <br><div>UC Berkeley, Fall 2013</div></li><br>
     </ul>
     </td></tr>
   </table>
