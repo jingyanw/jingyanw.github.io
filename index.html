@@ -46,7 +46,10 @@
       I received my Ph.D. in the School of Computer Science at Carnegie Mellon University, advised by <a href="https://www.cs.cmu.edu/~nihars/">Nihar Shah</a>. Before that, I received my B.S. in Electrical Engineering and Computer Sciences from UC Berkeley.
     </p>
     <p>
-      My research interest is in statistical machine learning, particularly in applications to high-stakes decision-making and evaluation problems such as admissions, hiring, peer grading and peer review. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that real-world impacts.
+      My research interests lie in statistical machine learning, particularly in applications to high-stakes decision-making and evaluation problems such as admissions, hiring, grading and peer review. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts.
+    </p>
+    <p>
+      My CV is available <a href="cv.pdf">here</a>.
     </p><br>
     <p>
       <b>Email:</b> jingyanw [at] gatech.edu
@@ -67,14 +70,14 @@
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-  The goal of my research is to develop <b>accurate, efficient and fair evaluation systems</b>. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that real-world impacts. Specifically, I identify, analyze and improve three key components: <b>algorithms, people, and designs</b>.
+  The goal of my research is to develop <b>accurate, efficient and fair evaluation systems</b>. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts. Specifically, I identify, analyze and improve three key components: <b>algorithms, people, and designs</b>.
     <ul>
-    <li> <b>Algorithms:</b> It's important to think holistically about the objectives and constraints, which describe intricate connections and tradeoffs underlying evaluation systems. I develop algorithms that effectively aggregate evaluation data, integrating accuracy with the following considerations:<br><br>
+    <li> <b>Algorithms:</b> It's important to think holistically about the objectives and constraints, which induce intricate connections and tradeoffs underlying evaluation systems. I develop algorithms that effectively aggregate evaluation data, integrating accuracy with the following considerations:<br><br>
       <ul>
         <li><b>Fairness:</b>
-          We consider a crowdsourcing model (Bradley-Terry model) that infers item quality from pairwise comparisons. We propose a simple modification to the widely-used maximum likelihood estimator, which is simple to implement and enjoys a win-win in the bias-accuracy tradeoff – that is, it significantly improves fairness while achieving optimal accuracy. [<a href="https://arxiv.org/abs/1906.04066">paper</a> | <a href="https://slideslive.com/38929955">talk</a>]
+          We consider a crowdsourcing model (Bradley-Terry model) that infers item quality from pairwise comparisons. We propose a modification to the widely-used maximum likelihood estimator, which is simple to implement and enjoys a win-win in the bias-accuracy tradeoff – that is, it significantly improves fairness while achieving optimal accuracy. [<a href="https://arxiv.org/abs/1906.04066">paper</a> | <a href="https://slideslive.com/38929955">talk</a>]
         </li><br>
-        <li><b>Uncertainty:</b> In applications such as hiring and admissions, part of the goal is to successfully recruit a pre-defined number of candidates. We formulate a Knapsack-style combinatorial optimization problem, and present theoretical guarantees for various algorithms that simultaneously consider quality and uncertainty.
+        <li><b>Reliability:</b> In applications such as hiring and admissions, one important goal is to successfully recruit a pre-defined number of candidates. We formulate a Knapsack-style combinatorial optimization problem, and present theoretical guarantees for various algorithms that simultaneously consider quality and the uncertainty involved. [<a href="https://openreview.net/forum?id=tadPkBL2gHa">paper</a>]
         </li>
       </ul><br>
 
@@ -86,14 +89,14 @@
         <li> <b>Personal experience:</b>
           Evaluators are influenced by their experiences. For example, in teaching evaluation, students often give higher ratings if they receive higher grades. We capture such tendencies by a natural monotonic constraint, and propose an estimator that reduces the bias in a data-dependent fashion, without prior knowledge on the extent of the bias. [<a href="https://arxiv.org/abs/2012.00714">paper</a> | <a href="https://slideslive.com/38947990">talk</a>]
         </li><br>
-        <li> <b> Ordering effect:</b> Evaluations are made sequentially in applications such as sports/arts competitions and hiring. We provide a model to capture the nature of such sequential evaluation, supported by crowdsourcing experiments. We propose a ranking estimator that is both efficient and optimal (in certain notions), whereas using the ranking naively induced by the scores is provably not optimal. [<a href="https://arxiv.org/abs/2205.01607">paper</a>]
+        <li> <b> Ordering effect:</b> Evaluations are made sequentially in applications such as sports/arts competitions and hiring. We provide a model to capture the nature of such sequential evaluation, supported by theory and crowdsourcing experiments. We propose a ranking estimator that is both efficient and optimal (in certain notions), whereas using the ranking naively induced by the scores is provably not optimal. [<a href="https://arxiv.org/abs/2205.01607">paper</a>]
         </li><br>
       </ul>
 
-    <li><b>Designs:</b> People engage with algorithms, and algorithms influence human behaviors. I study design and policy decisions that underpin the interactions between people and algorithms in evaluation systems. In large-scale evaluation tasks, we examine different allocation schemes that distribute the task to reviewers, and provide a comprehensive comparison between them using a mixture of theoretical and experimental approaches. [<a href="https://arxiv.org/abs/2209.08665">paper</a>]
+    <li><b>Designs:</b> People engage with algorithms, and algorithms influence human behaviors. I study design and policy decisions that underpin the interactions between people and algorithms in evaluation systems. In large-scale evaluation tasks, we examine allocation schemes that assign the task to reviewers in a distributed fashion, and provide a comprehensive comparison between them using a mixture of theoretical and experimental approaches. [<a href="https://arxiv.org/abs/2209.08665">paper</a>]
     </li>
     </ul>
-    Beyond technical work, I desire to extend my research to real policy improvements in practice. For example, we compile the data and evaluate the gender distribution in award-winning papers in 16 top computer science conferences in the past 10 years, which shows prominent differences across conferences. [<a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">blog post</a>] We also consider the biases caused by the alphabetical ordering practice in scientific publication. Taking cognizance of the biases arising from alphabetical ordering, the Machine Learning Department at CMU has randomized the ordering of <a href="https://www.ml.cmu.edu/people/phd-students.html">students</a> and <a href="https://www.ml.cmu.edu/people/core-faculty.html">faculty</a> on its webpages, along with many other institutions. [<a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">blog post</a>]
+    Beyond technical work, I extend my insights from research to real policy improvements in practice. For example, we compile the data and evaluate the gender distribution in award-winning papers in 16 top computer science conferences in the past 10 years, which shows prominent differences across conferences. [<a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">blog post</a>] We also consider the biases caused by the alphabetical ordering practice in scientific publication. Taking cognizance of the biases arising from alphabetical ordering, the Machine Learning Department at CMU has randomized the ordering of <a href="https://www.ml.cmu.edu/people/phd-students.html">students</a> and <a href="https://www.ml.cmu.edu/people/core-faculty.html">faculty</a> on its webpages, along with many other institutions. [<a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">blog post</a>]
   </td></tr>
   </table>
   </section>
@@ -194,7 +197,7 @@
         	Also appeared as "Ranking and Rating Rankings and Ratings" at <papersource>AAAI 2020 Sister Conference Track</papersource>
         </div>
         <div>
-            [<a href="slides/miscalibration_slides.pdf">slides</a>]
+            [<a href="slides/miscalibration_slides.pdf">slides</a>] [<a href="https://blog.ml.cmu.edu/2019/05/04/your-2-is-my-1-your-3-is-my-9-handling-crazy-miscalibrations-in-ratings-from-people/">blog post</a>]
         </div><br>
       </li>
 
@@ -239,8 +242,11 @@
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
     <ul>
-    <li><b>16-720 Computer Vision, TA</b> <br><div>CMU, Fall 2017</div></li><br>
-    <li><b>EE 20N Signals and Systems, Lab Assistant</b> <br><div>UC Berkeley, Fall 2013</div></li><br>
+    <li><b>Guest lecturer</b></li>
+      <div>PIC 16B (Python with Applications II), UCLA,  Winter 2023</div>
+      <div>ISYE 6740 (Computational Data Analysis), Georgia Tech, Fall 2022</div><br>
+    <li><b>TA</b> <br><div>16-720 (Computer Vision), CMU, Fall 2017</div></li><br>
+    <li><b>Lab Assistant</b> <br><div>EE 20N (Signals and Systems), UC Berkeley, Fall 2013</div></li><br>
     </ul>
     </td></tr>
   </table>
