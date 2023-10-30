@@ -50,7 +50,7 @@
       My research interests lie in statistical machine learning, particularly in applications to high-stakes decision-making and evaluation problems such as admissions, hiring, grading and peer review. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts.
     </p>
     <p>
-      My CV is available <a href="cv_09_2023.pdf">here</a> (updated 09/2023).
+      My CV is available <a href="cv_10_2023.pdf">here</a> (updated 10/2023).
     </p>
     <p>
       <b>Email:</b> jingyanw [at] gatech.edu
@@ -63,6 +63,32 @@
   </table>
   </section>
 
+  <!-- ------------------------------------------------- -->
+  <section id="news">
+  <hr>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tr><td>
+    <sectiontitle>News</sectiontitle>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <ul style="line-height: 1.7em">
+    <li> Nov 2023: Presenting at the <a href="https://eecsrisingstars2023.cc.gatech.edu/">EECS Rising Stars Workshop</a> at Georgia Tech.
+    </li>
+    <li> Oct 2023: Visiting <a href="https://www.slmath.org/">SLMath</a> as a research member for the <a href="https://www.slmath.org/programs/353">Algorithms, Fairness, and Equity</a> program in Berkeley during Oct - Dec 2023. Happy to chat more about research!
+    </li>
+    <li> Oct 2023: Presenting at the INFORMS annual meeting on our paper "Debiasing Evaluations That Are Biased by Evaluations".
+    </li>
+    <li> Sept 2023: Paper "Perceptual Adjustment Queries and an Inverted Measurement Paradigm for Low-Rank Metric Learning" accepted to NeurIPS 2023.
+    </li>
+    <li> Aug 2023: Participating in the <a href="https://www.slmath.org/workshops/1051">Introductory Workshop: Algorithms, Fairness, and Equity</a> at <a href="https://www.slmath.org/">SLMath</a> in Berkeley.
+    </li>
+    <li> July 2023: Presenting at EC 2023 on our paper "Modeling and Correcting Bias in Sequential Evaluation".
+    </ul>
+    </td></tr>
+  </table>
+  </section>
+
+  <!-- ------------------------------------------------- -->
   <section id="research">
   <hr>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
@@ -71,7 +97,7 @@
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-  The goal of my research is to develop <b>accurate, efficient and fair evaluation systems</b>. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts. Specifically, I identify, analyze and improve three key components: <b>algorithms, people, and designs</b>.
+  The goal of my research is to develop <b>accurate, efficient and fair evaluation systems</b>. I draw inspirations from psychology to model real-world phenomena, develop theoretical guarantees using tools from statistics and computer science, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts. Specifically, I identify, analyze and improve three key components: <b>algorithms, people, and design</b>.
     <ul>
     <li> <b>Algorithms:</b> It's important to think holistically about the objectives and constraints, which induce intricate connections and tradeoffs underlying evaluation systems. I develop algorithms that effectively aggregate evaluation data, integrating accuracy with the following considerations:<br><br>
       <ul>
@@ -94,7 +120,16 @@
         </li><br>
       </ul>
 
-    <li><b>Designs:</b> People engage with algorithms, and algorithms influence human behaviors. I study design and policy decisions that underpin the interactions between people and algorithms in evaluation systems. In large-scale evaluation tasks, we examine allocation schemes that assign the task to reviewers in a distributed fashion, and provide a comprehensive comparison between them using a mixture of theoretical and experimental approaches. [<a href="https://arxiv.org/abs/2209.08665">paper</a>]
+    <li><b>Design:</b> People engage with algorithms, and algorithms influence human behaviors. I study design and policy decisions that underpin the interactions between people and algorithms in evaluation systems.<br><br>
+      <ul>
+        <li> <b>Task allocation:</b>
+          In large-scale evaluation tasks, we examine allocation schemes that assign the task to reviewers in a distributed fashion, and provide a comprehensive comparison between them using a mixture of theoretical and experimental approaches. [<a href="https://arxiv.org/abs/2209.08665">paper</a>]
+        </li><br>
+        <li> <b>Data elicitation:</b> Cardinal and ordinal queries have their pros and cons. We propose a new data elicitation scheme that achieves the best of both worlds. Taking preference learning as an example, it asks questions of the form "to reach the same level of preference for a 2-dollar bus ride, how much do you want to spend on taxi?", which combines ordinal reasoning and cardinal output.
+        <!-- The formulation leads to a non-standard trace regression problem that is of independent theoretical interest. -->
+          [<a href="https://arxiv.org/abs/2309.04626">paper</a>]
+        </li>
+      </ul>
     </li>
     </ul>
     Beyond technical work, I extend my insights from research to real policy improvements in practice. For example, we compile the data and evaluate the gender distribution in award-winning papers in 16 top computer science conferences in the past 10 years, which shows prominent differences across conferences. [<a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">blog post</a>] We also consider the biases caused by the alphabetical ordering practice in scientific publication. Taking cognizance of the biases arising from alphabetical ordering, the Machine Learning Department at CMU has randomized the ordering of <a href="https://www.ml.cmu.edu/people/phd-students.html">students</a> and <a href="https://www.ml.cmu.edu/people/core-faculty.html">faculty</a> on its webpages, along with many other institutions. [<a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">blog post</a>]
@@ -105,7 +140,7 @@
 <!-- ------------------------------------------------- -->
   <section id="publications">
   <hr>
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+<!--   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tr><td>
         <sectiontitle>Preprints</sectiontitle>
       </td></tr>
@@ -121,17 +156,62 @@
         </div>
       </li>
     </ul>
+  </table> -->
+
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tr><td>
+        <sectiontitle>Journal Publications (Under Review)</sectiontitle>
+      </td></tr>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <ul>
+      <!-- - -->
+      <li> <papertitle><a href="http://arxiv.org/abs/2205.01607">Modeling and Correcting Bias in Sequential Evaluation</a></papertitle><br>
+        <div><paperauthors>Jingyan Wang, Ashwin Pananjady</paperauthors><br>
+          <papersource>Under major revision in Operations Research</papersource>
+        </div>
+        <br>
+      </li>
+
+      <!-- - -->
+      <li> <papertitle><a href="https://arxiv.org/abs/2012.00714">Debiasing Evaluations That Are Biased by Evaluations</a></papertitle><br>
+        <div><paperauthors>Jingyan Wang, Ivan Stelmakh, Yuting Wei, Nihar B. Shah</paperauthors><br>
+          <papersource>Under minor revision in Journal of Machine Learning Research (JMLR)</papersource>
+        </div>
+        <br>
+      </li>
+
+      <!-- - -->
+      <li> <papertitle><a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-39-5-1326">3D differential phase-contrast microscopy with computational illumination using an LED array</a></papertitle><br>
+        <div><paperauthors>Lei Tian, Jingyan Wang, Laura Waller</paperauthors><br>
+          <papersource>Optics Letters, 2014</papersource><br>
+        </div><br>
+      </li>
+
+    </ul>
   </table>
 
 <!-- ------------------------------------------------- -->
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
     <tr><td>
       <!-- <sectiontitle>Papers</sectiontitle> -->
-      <sectiontitle>Publications</sectiontitle>
+      <sectiontitle>Peer-Reviewed Conference Publications</sectiontitle>
     </td></tr>
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <ul>
+      <!-- - -->
+
+      <li> <papertitle><a href="https://arxiv.org/abs/2309.04626">Perceptual Adjustment Queries and an Inverted Measurement Paradigm for Low-Rank Metric Learning</a></papertitle><br>
+        <div><paperauthors>Austin Xu, Andrew D. McRae, Jingyan Wang, Mark A. Davenport, Ashwin Pananjady</paperauthors><br>
+          <papersource>NeurIPS, 2023</papersource>
+        </div>
+        <div>
+          [<a href="https://github.com/austinxu87/paq">code</a>]
+        </div>
+        <br>
+      </li>
+
       <!-- - -->
       <li> <papertitle><a href="http://arxiv.org/abs/2205.01607">Modeling and Correcting Bias in Sequential Evaluation</a></papertitle><br>
         <div><paperauthors>Jingyan Wang, Ashwin Pananjady</paperauthors><br>
@@ -177,7 +257,7 @@
       </li>
 
       <!-- - -->
-      <li> <papertitle><a href="https://arxiv.org/abs/2012.00714">Debiasing Evaluations That are Biased by Evaluations</a></papertitle><br>
+      <li> <papertitle><a href="https://arxiv.org/abs/2012.00714">Debiasing Evaluations That Are Biased by Evaluations</a></papertitle><br>
         <div><paperauthors>Jingyan Wang, Ivan Stelmakh, Yuting Wei, Nihar B. Shah</paperauthors><br>
           <papersource>AAAI, 2021</papersource>
         </div>
@@ -236,10 +316,11 @@
       </li>
 
       <!-- - -->
-      <li> <papertitle><a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-39-5-1326">3D differential phase-contrast microscopy with computational illumination using an LED array</a></papertitle><br>
-        <div><paperauthors>Lei Tian, Jingyan Wang, Laura Waller</paperauthors><br>
-          <papersource>Optics Letters, 2014</papersource><br>
-        </div><br>
+      <li> <papertitle><a href="https://dl.acm.org/doi/10.1109/ICMLA.2014.101">Iterative Hard Thresholding for Keyword Extraction from Large Text Corpora. ICMLA 2014</a></papertitle><br>
+        <div><paperauthors>Steve Yadlowsky, Preetum Nakkiran, Jingyan Wang, Rishi Sharma, Laurent El Ghaoui</paperauthors><br>
+          <papersource>ICMLA, 2014</papersource>
+        </div>
+        <br>
       </li>
       </ul>
   </table>
@@ -254,10 +335,13 @@
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
     <ul>
+    <li><b>Co-instructor</b> <br><div>ISYE 8813 (Algorithmic Foundations of Ethical Machine Learning), Georgia Tech, Fall 2023</div></li><br>
+
     <li><b>Guest lecturer</b></li>
       <div>IST402 (Crowdsourcing and Crowd-AI Systems), Penn State,  Spring 2023</div>
       <div>PIC 16B (Python with Applications II), UCLA,  Winter 2023</div>
       <div>ISYE 6740 (Computational Data Analysis), Georgia Tech, Fall 2022</div><br>
+
     <li><b>TA</b> <br><div>16-720 (Computer Vision), CMU, Fall 2017</div></li><br>
     <li><b>Lab Assistant</b> <br><div>EE 20N (Signals and Systems), UC Berkeley, Fall 2013</div></li><br>
     </ul>
@@ -274,7 +358,7 @@
     <sectiontitle>Misc</sectiontitle>
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    I play the violin with the Atlanta Community Symphony Orchestra. We perform <a href="https://acsorch.org/acso-concerts/">free concerts</a> in the Atlanta metro area.
+    I play the violin with the <a href="https://acsorch.org/">Atlanta Community Symphony Orchestra</a>. We perform <a href="https://acsorch.org/acso-concerts/">free concerts</a> in the Atlanta metro area.
   </table>
   </section>
 
