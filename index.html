@@ -43,7 +43,7 @@
     </div>
 
     <div class="column_right">
-    <p>I am a research assistant professor at the <a href="https://ttic.edu/">Toyota Technological Institute at Chicago</a>. My research interests lie in statistical machine learning, particularly in applications to high-stakes decision-making and evaluation problems such as admissions, hiring, grading, and peer review. I draw inspirations from psychology to build human behavioral models, develop algorithms with theoretical guarantees, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts.
+    <p>I am a research assistant professor at the <a href="https://ttic.edu/">Toyota Technological Institute at Chicago</a>. My research interests lie in statistical machine learning, particularly in developing methodology for evaluation of human (e.g., admissions, grading, hiring, peer review) and algorithms (e.g., A/B testing). I draw inspirations from psychology to build human behavioral models, develop algorithms with theoretical guarantees, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts.
     </p>
     <p>
       Previously, I was a President’s postdoctoral fellow in the School of Industrial and Systems Engineering (ISyE) and the Algorithms and Randomness Center (ARC) at Georgia Institute of Technology, working with <a href="https://sites.gatech.edu/ashwin-pananjady/">Ashwin Pananjady</a> and <a href="https://www.juba-ziani.com/">Juba Ziani</a>.
@@ -103,44 +103,34 @@
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-  The goal of my research is to develop <b>accurate, fair, reliable, and efficient evaluation systems</b>. I draw inspirations from psychology to build human behavioral models, develop algorithms with theoretical guarantees, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts. Specifically, I identify, analyze and improve three interrelated key components: <b>algorithms, people, and design</b>.
+  The goal of my research is to develop theoretical foundations <b>for principled evaluation paradigms that model, collect, and aggregate human evaluation data</b>. I draw inspirations from psychology to build human behavioral models, develop algorithms with theoretical guarantees, conduct crowdsourcing experiments, and implement policy changes that make real-world impacts. Specifically, I consider two types of evaluation tasks: (1) evaluation of people and human work; (2) evaluation of models and algorithms.
     <ul>
-    <li> <b>Algorithms:</b> It's important to holistically think about different types of objectives, which induce intricate connections and tradeoffs underlying these evaluation systems. I develop algorithms that effectively aggregate evaluation data, integrating accuracy guarantees with the following considerations:<br><br>
-      <ul>
-        <li><b>Fairness:</b>
-          We consider a crowdsourcing model (Bradley-Terry model) that infers item quality from pairwise comparisons. We propose a modification to the widely-used maximum likelihood estimator, which is simple to implement and enjoys a win-win in the bias-accuracy tradeoff – that is, it significantly improves fairness while achieving optimal accuracy. [<a href="https://arxiv.org/abs/1906.04066">paper</a> | <a href="https://slideslive.com/38929955">talk</a>]
-        </li><br>
-        <li><b>Reliability:</b> In applications such as hiring and admissions, one important goal is to successfully recruit a pre-defined number of candidates. We formulate a Knapsack-style combinatorial optimization problem, and present theoretical guarantees for various algorithms that simultaneously consider quality and the uncertainty involved. [<a href="https://openreview.net/forum?id=tadPkBL2gHa">paper</a>]
+      <li><b>Evaluation of people and human work:</b> We rely on evaluation to allocate scarce resources, such as selecting students in admissions, candidates in hiring, and papers in peer review. These are critical high-stakes applications, having long-term impacts to individuals, shaping the society as a whole, sets research priorities to advance science.<br><br>
+        <ul>
+          <li> I consider multiple sources of <b>behavioral biases</b> when people provide evaluation data, such as <a href="https://arxiv.org/abs/1806.05085">miscalibration</a>, <a href="https://arxiv.org/abs/2205.01607">ordering effect</a>, and bias induced by <a href="https://arxiv.org/abs/2012.00714">irrelevant experience</a>.<br><br>
+
+          <li>I consider <b>different objectives</b>, such as a natural notion of <a href="https://arxiv.org/abs/1906.04066">fairness</a>, the <a href="https://openreview.net/forum?id=tadPkBL2gHa">variance</a> in securing a target number of recruits. Many of my methods achieve a win-win in improving these criteria while maintaining optimality for accuracy and efficiency.<br><br>
+          </li>
+
+          <li>
+            I consider different <b>design choices</b>, such as how to <a href="https://arxiv.org/abs/2209.08665">allocate tasks</a> in a distributed fashion and how to <a href="https://arxiv.org/abs/2309.04626">elicit data</a> from people.<br><br>
+          </li>
+        </ul>
+      </li>
+      <li><b> Evaluation of models and algorithms:</b>
+        I have been excited about understanding how to evaluate online dynamic AI systems that interact with people, such as recommendation algorithms and large language models. Under a causal inference framework, I consider the <a href="https://arxiv.org/abs/2507.11891">interference caused by algorithms sharing data</a> in A/B testing, and analyze the impact of such interference in terms of decision making. I am currently pursuing a number of ongoing projects in this direction.
+      </li>
+    </ul>
         </li>
       </ul><br>
 
-    <li> <b>People:</b> Algorithms do not operate in isolation; it is crucial to keep in mind that the input data come from human evaluators. People are not perfectly rational agents, and have biases even if we consciously try to avoid them. My work identifies different sources of human biases:<br><br>
-      <ul>
-        <li> <b>Miscalibration:</b>
-          People have different numerical scales when reporting ratings. We design algorithms that take into account the miscalibration of people – for example, some people tend to be lenient and give higher scores, and some others tend to be strict. Our algorithms are provably more robust to people’s miscalibration, and hence make the evaluation more fair. [<a href="https://arxiv.org/abs/1806.05085">paper</a> | <a href="https://blog.ml.cmu.edu/2019/05/04/your-2-is-my-1-your-3-is-my-9-handling-crazy-miscalibrations-in-ratings-from-people/">blog post</a>]
-        </li><br>
-        <li> <b>Personal experience:</b>
-          Evaluators are influenced by their experiences. For example, in teaching evaluation, students often give higher ratings to an instructor if they receive higher grades in this course. We capture such tendencies by a natural monotonic constraint, and propose an estimator that reduces the bias in a data-dependent fashion, without prior knowledge on the amount of the bias. [<a href="https://arxiv.org/abs/2012.00714">paper</a> | <a href="https://slideslive.com/38947990">talk</a>]
-        </li><br>
-        <li> <b> Ordering effect:</b> Evaluations are made sequentially in applications such as sports/arts competitions and hiring. We provide a model to capture the nature of such sequential evaluation, supported by theory and crowdsourcing experiments. We propose a ranking estimator that is both efficient and optimal (in certain notions), whereas using the ranking naively induced by the scores is provably not optimal. [<a href="https://arxiv.org/abs/2205.01607">paper</a>]
-        </li><br>
-      </ul>
 
-    <li><b>Design:</b> People engage with algorithms, and algorithms influence human behaviors. I study design and policy decisions that underpin the interactions between people and algorithms:<br><br>
-      <ul>
-        <li> <b>Task allocation:</b>
-          In large-scale evaluation tasks, we examine allocation schemes that assign the task to reviewers in a distributed fashion, and provide a comprehensive comparison between these allocation schemes, using a mixture of theoretical and experimental approaches. [<a href="https://arxiv.org/abs/2209.08665">paper</a>]
-        </li><br>
-        <li> <b>Data elicitation:</b> Cardinal and ordinal queries have their pros and cons. We propose a new data elicitation scheme that achieves the best of both worlds. Taking preference learning as an example, it asks questions of the form "to reach the same level of satisfaction with a 2-dollar bus ride, how much do you want to spend on taxi?", which combines ordinal reasoning and cardinal reporting.
-        <!-- The formulation leads to a non-standard trace regression problem that is of independent theoretical interest. -->
-          [<a href="https://arxiv.org/abs/2309.04626">paper</a>]
         </li>
       </ul>
     </li>
     </ul>
-    I extend my insights from research to real policy improvements in practice. For example, we compile the data and evaluate the gender distribution in award-winning papers in 16 top computer science conferences in the past 10 years, which shows prominent differences across conferences. [<a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">blog post</a>]
-    We also consider the biases caused by the alphabetical ordering practice in scientific publication. Taking cognizance of this bias arising from alphabetical ordering, the Machine Learning Department at CMU has randomized the ordering of <a href="https://www.ml.cmu.edu/people/phd-students.html">students</a> and <a href="https://www.ml.cmu.edu/people/core-faculty.html">faculty</a> on its webpages, along with many other institutions. [<a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">blog post</a>]
-    The debiasing algorithm that I have developed is currently deployed in practice with grant review agencies.
+    <b>Real-world impacts:</b> I extend my insights from research to real policy improvements in practice. For example, we compile the data and evaluate the <a href="https://researchonresearch.blog/2019/06/18/gender-distributions-of-paper-awards/">gender distribution in award-winning papers</a> in 16 top computer science conferences in the past 10 years, which shows prominent differences across conferences.
+    We also consider the biases caused by <a href="https://researchonresearch.blog/2018/11/28/theres-lots-in-a-name/">alphabetical ordering</a> in scientific publication. Taking cognizance of this bias arising from alphabetical ordering, many institutions (such as <a href="https://www.ml.cmu.edu/people/core-faculty.html">the Machine Learning Department at CMU</a>) has randomized the ordering for listing personnel. The debiasing algorithm that I have developed is also currently deployed in practice with grant review agencies.
   </td></tr>
   </table>
   </section>
@@ -380,7 +370,9 @@
   </table>
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
     <ul>
-    <li><b>Co-instructor</b> <br><div>ISYE 8813 (Algorithmic Foundations of Ethical Machine Learning), Georgia Tech, Fall 2023</div></li><br>
+    <li><b>Instructor</b> <br>
+      <div>TTIC 44010 (People, Society, and Algorithms), TTIC, Autumn 2025 [<a href="syllabus_autumn_2025.pdf">syllabus</a>]</div>
+      <div>ISYE 8813 (Algorithmic Foundations of Ethical Machine Learning), Georgia Tech, Fall 2023 (with Juba Ziani)</div></li><br>
 
     <li><b>Guest lecturer</b></li>
       <div>IST402 (Crowdsourcing and Crowd-AI Systems), Penn State,  Spring 2023</div>
@@ -406,11 +398,11 @@
 
     I play the violin with the <a href="https://www.cmsorch.org/">Chicago Metropolitan Symphony Orchestra</a>.<br><br>
 
-    <b><a href="https://www.cmsorch.org/concerts/tragedy-and-comedy">Next concert</a>:<br> March 15, 2025 (Saturday at 7:30pm)</b><br>
+<!--     <b><a href="https://www.cmsorch.org/concerts/tragedy-and-comedy">Next concert</a>:<br> March 15, 2025 (Saturday at 7:30pm)</b><br>
     Gannon Concert Hall, Holtschneider Performance Center, DePaul University (2330 N Halsted St, Chicago, IL 60614)<br><br>
 
 
-<!--     <b><a href="https://www.cmsorch.org/concerts/dvorak-7">Next concert</a>:<br> November 23, 2024 (Saturday at 7:30pm)</b><br>
+    <b><a href="https://www.cmsorch.org/concerts/dvorak-7">Next concert</a>:<br> November 23, 2024 (Saturday at 7:30pm)</b><br>
     Gannon Concert Hall, Holtschneider Performance Center, DePaul University (2330 N Halsted St, Chicago, IL 60614)<br><br>
  -->
 
